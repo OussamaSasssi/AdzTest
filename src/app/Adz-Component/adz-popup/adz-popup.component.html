@@ -1,0 +1,12 @@
+
+
+<div id="popup1" class="overlay">
+        <div class="popup">
+            <div *ngIf="book.volumeInfo.title!=NULL" class="title">  {{book.volumeInfo.title}}</div>
+            <div *ngIf="book.volumeInfo.authors!=NULL" class="author"> {{book.volumeInfo. authors}}</div>
+            <div class="content">
+                    <div *ngIf="book.volumeInfo.imageLinks!=NULL" class="cover"><img src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="{{book.volumeInfo.title}}" width="150" height="204" ></div>
+                    <div *ngIf="book.volumeInfo.description!=NULL" class="description"> {{book.volumeInfo.description}}</div>
+            </div>
+        </div>
+</div>

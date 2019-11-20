@@ -1,0 +1,43 @@
+.popup {
+
+    margin: 7px auto 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    transition: all 5s ease-in-out;
+    width: 600px;
+    height: 60vh;
+    text-align: center;
+  }
+  
+
+.title{
+    position: relative;
+    margin-top:2px;
+    padding-top: 2px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    text-align: center;
+}
+
+.description{
+    position: relative;
+    margin-top:20px;
+    padding-top: 2px;
+    font-size: small;
+    font-family: 'Love Ya Like A Sister', cursive;
+    text-align: left;
+}
+
+.cover{
+    margin-top: 15px;
+}
+
+.author{
+    position: relative;
+    margin-top:20px;
+    padding-top: 2px;
+    font-size: x-small;
+    font-family: 'Love Ya Like A Sister', cursive;
+    text-align: right;
+}

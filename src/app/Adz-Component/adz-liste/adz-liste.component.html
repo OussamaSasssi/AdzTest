@@ -1,0 +1,45 @@
+
+<body>
+        <input type="submit" value="Retour" class=btn-1 routerLink="">
+
+        <h1 class="headline"  >“Un bon livre est un bon ami.”</h1>
+        <p class="intro">Filter encore les résultats</p>
+<form (ngSubmit)="onClick()">
+
+    <div class="select">
+    <select id="filter" name="filter" [(ngModel)]="filter" >
+           
+        <option *ngFor="let filt of filters" [value]="filt.value">{{filt.label}}</option>
+    </select>
+    </div>
+    <div class="select">
+
+    <ng-container [ngSwitch]="filter"  >
+
+        <select [(ngModel)]="filterSearch" name="filterSearch" *ngSwitchCase="'inauthor'">
+            <option *ngFor='let author of authors' [value]="author">{{author}}</option>
+        </select>
+
+        <select  [(ngModel)]="filterSearch" name="filterSearch" *ngSwitchCase="'subject'">
+            <option *ngFor='let category of categories' [value]="category">{{category}}</option>
+        </select>
+
+    </ng-container>
+    </div>
+    <input type="submit" value="Filtrer" class=btn>
+</form>
+
+<div class="container">
+
+<div *ngFor='let book of books'  class="card" (click)="getOne(book.id)" >
+
+    <li *ngIf="book.volumeInfo.imageLinks!=NULL"><img src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="{{book.volumeInfo.title}}" width="150" height="204" >
+    <li *ngIf="book.volumeInfo.title!=NULL"> {{book.volumeInfo.title}}</li>
+
+   
+
+        
+</div>
+
+</div>
+</body>
